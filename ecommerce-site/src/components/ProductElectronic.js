@@ -186,13 +186,12 @@ export const ProductElectronic = () => {
         }
     ]
     var product = data.filter(item => item.category == "electronics");
-    var len = product.length
 
     return (
         <>
             <div className="title text-center my-4">
                 <h1>
-                Electronic Products
+                Electronic  Products
                 </h1>
             </div>
             <div>

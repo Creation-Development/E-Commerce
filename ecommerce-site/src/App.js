@@ -6,6 +6,7 @@ import { Home } from './components/Home';
 import { ProductClothing } from './components/ProductClothing';
 import { ProductAssesories } from './components/ProductAssesories';
 import { ProductElectronic } from './components/ProductElectronic';
+import { ProductSale } from './components/ProductSale';
 function App() {
   return (
     <Router>
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path="/product/electronics">
          <ProductElectronic/>
+        </Route>
+        <Route exact path="/product/sale">
+         <ProductSale/>
         </Route>
       </Switch>
     </Router>

@@ -186,7 +186,6 @@ export const ProductAssesories = () => {
         }
     ]
     var product = data.filter(item => item.category == "assesories");
-    var len = product.length
 
     return (
         <>

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Button, Card, Col, Container, Row } from 'react-bootstrap'
+import { Button, Card, Container } from 'react-bootstrap'
 
-export const ProductClothing = () => {
 
+export const ProductSale = () => {
     var data = [
         {
             "id": 1,
@@ -185,13 +185,13 @@ export const ProductClothing = () => {
             "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
         }
     ]
-    var product = data.filter(item => item.category == "clothing");
+    var product = data.filter(item => item.sale == "true");
 
     return (
         <>
             <div className="title text-center my-4">
                 <h1>
-                    Clothing Products
+                Electronic  Products
                 </h1>
             </div>
             <div>
@@ -233,3 +233,4 @@ export const ProductClothing = () => {
         </>
     )
 }
+
