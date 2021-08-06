@@ -1,8 +1,8 @@
 import React from 'react'
-import { Button, Card, Container } from 'react-bootstrap'
+import { withRouter } from 'react-router-dom'
 
+function ProductView(props) {
 
-export const ProductSale = () => {
     var data = [
         {
             "id": 1,
@@ -185,52 +185,30 @@ export const ProductSale = () => {
             "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
         }
     ]
-    var product = data.filter(item => item.sale == "true");
+    console.warn(props)
+    var id = props.match.params.id;
+    var product = data.filter(item => item.id == id)[0];
+    console.log(product.image);
 
     return (
         <>
-            <div className="title text-center my-4">
-                <h1>
-                Electronic  Products
-                </h1>
-            </div>
-            <div>
-
-                <Container>
-                    <div className="row">
-                    {
-                        product.map((item) => {
-
-                            return (
-                                <>
-                                <div className="col-sm-4">
-                                    <Card style={{ width: '25rem', height:670, marginBottom:50}}>
-                                        <Card.Img variant="top" src={item.image} height="450" />
-                                        <Card.Body>
-                                            <Card.Title>{item.title.slice(0,20)}</Card.Title>
-                                            <Card.Title><b>Price : ${item.price}</b></Card.Title>
-                                            <Card.Text>
-                                                {item.description.slice(0, 100)}
-                                            </Card.Text>
-                                            <div className="d-flex">
-                                            <Button className="btn-sm" href={`/product/${item.id}`} style={{marginInline:5}} variant="danger">View Product</Button>
-                                            <Button className="btn-sm" style={{marginInline:5}} variant="success">Add To Cart</Button>
-                                            </div>
-                                        </Card.Body>
-                                    </Card>
-                                    </div>
-                                </>
-                            )
-                            
-                        })}
-                        </div>
-
-
-                </Container>
-
-
+            <div class="row container my-4 featurette">
+                <div className="col-md-1"></div>
+                <div class="col-md-5">
+                    <img src={product.image} width="500" height="500"/>
+                </div>
+                <div className="col-md-1"></div>
+                <div class="col-md-5">
+                    <h4>{product.title}</h4>
+                    <h4 className="text-danger my-4">Price : ${product.price}</h4>
+                    <h5 className="my-4">{product.description}</h5>
+                    <div className="text-center my-4">
+                    <button className="btn btn-success">Add To Cart</button>
+                    </div>
+                </div>
             </div>
         </>
     )
 }
 
+export default withRouter(ProductView)

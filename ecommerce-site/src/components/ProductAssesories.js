@@ -213,7 +213,7 @@ export const ProductAssesories = () => {
                                                 {item.description.slice(0, 100)}
                                             </Card.Text>
                                             <div className="d-flex">
-                                            <Button className="btn-sm" style={{marginInline:5}} variant="warning">View Product</Button>
+                                            <Button className="btn-sm" href={`/product/${item.id}`} style={{marginInline:5}} variant="danger">View Product</Button>
                                             <Button className="btn-sm" style={{marginInline:5}} variant="success">Add To Cart</Button>
                                             </div>
                                         </Card.Body>

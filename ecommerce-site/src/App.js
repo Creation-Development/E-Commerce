@@ -7,6 +7,7 @@ import { ProductClothing } from './components/ProductClothing';
 import { ProductAssesories } from './components/ProductAssesories';
 import { ProductElectronic } from './components/ProductElectronic';
 import { ProductSale } from './components/ProductSale';
+import ProductView from './components/ProductView';
 function App() {
   return (
     <Router>
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route exact path="/product/sale">
          <ProductSale/>
+        </Route>
+        <Route exact path="/product/:id">
+         <ProductView/>
         </Route>
       </Switch>
     </Router>
