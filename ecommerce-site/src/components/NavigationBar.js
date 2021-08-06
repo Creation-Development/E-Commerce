@@ -21,6 +21,7 @@ export const NavigationBar = () => {
                                     id="nav-dropdown-dark-example"
                                     title="Products"
                                     menuVariant="dark"
+                                    href="/product"
                                 >
                                     <NavDropdown.Item href="/product/clothing">Clothing</NavDropdown.Item>
                                     <NavDropdown.Item href="/product/assesories">Assesories</NavDropdown.Item>
