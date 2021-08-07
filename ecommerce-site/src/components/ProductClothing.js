@@ -18,32 +18,33 @@ export const ProductClothing = () => {
 
                 <Container>
                     <div className="row">
-                    {
-                        product.map((item) => {
+                        {
+                            product.map((item) => {
 
-                            return (
-                                <>
-                                <div className="col-sm-4">
-                                    <Card style={{ width: '25rem', height:670, marginBottom:50}}>
-                                        <Card.Img variant="top" src={item.image} height="450" />
-                                        <Card.Body>
-                                            <Card.Title>{item.title.slice(0,20)}</Card.Title>
-                                            <Card.Title><b>Price : Rs.{item.price}</b></Card.Title>
-                                            <Card.Text>
-                                                {item.description.slice(0, 100)}
-                                            </Card.Text>
-                                            <div className="d-flex">
-                                            <Button className="btn-sm" href={`/product/${item.id}`} style={{marginInline:5}} variant="danger">View Product</Button>
-                                            <Button className="btn-sm" style={{marginInline:5}} variant="success">Add To Cart</Button>
-                                            </div>
-                                        </Card.Body>
-                                    </Card>
-                                    </div>
-                                </>
-                            )
-                            
-                        })}
-                        </div>
+                                return (
+                                    <>
+                                        <div className="col-sm-4">
+                                            <Card style={{ width: '25rem', height: 670, marginBottom: 50 }}>
+                                                <Card.Img variant="top" src={item.image} height="450" />
+                                                <Card.Body>
+                                                    <Card.Title>{item.title.slice(0, 20)}</Card.Title>
+                                                    <Card.Title><b>Price : Rs.{item.price}&nbsp;&nbsp;&nbsp;<span class="badge rounded-pill bg-danger">{item.discount}</span>
+                                                    </b></Card.Title>
+                                                    <Card.Text>
+                                                        {item.description.slice(0, 100)}
+                                                    </Card.Text>
+                                                    <div className="d-flex">
+                                                        <Button className="btn-sm" href={`/product/${item.id}`} style={{ marginInline: 5 }} variant="primary">View Product</Button>
+                                                        <Button className="btn-sm" style={{ marginInline: 5 }} variant="primary">Add To Cart</Button>
+                                                    </div>
+                                                </Card.Body>
+                                            </Card>
+                                        </div>
+                                    </>
+                                )
+
+                            })}
+                    </div>
 
 
                 </Container>

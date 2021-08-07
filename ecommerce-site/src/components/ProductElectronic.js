@@ -27,7 +27,7 @@ export const ProductElectronic = () => {
                                         <Card.Img variant="top" src={item.image} height="450" />
                                         <Card.Body>
                                             <Card.Title>{item.title.slice(0,20)}</Card.Title>
-                                            <Card.Title><b>Price : Rs.{item.price}</b></Card.Title>
+                                            <Card.Title><b>Price : Rs.{item.price}</b>&nbsp;&nbsp;&nbsp;<span class="badge rounded-pill bg-danger">{item.discount}</span></Card.Title>
                                             <Card.Text>
                                                 {item.description.slice(0, 100)}
                                             </Card.Text>

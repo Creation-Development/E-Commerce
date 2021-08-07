@@ -19,10 +19,10 @@ function ProductView(props) {
                 <div className="col-md-1"></div>
                 <div class="col-md-5">
                     <h4>{product.title}</h4>
-                    <h4 className="text-danger my-4">Price : Rs.{product.price}</h4>
+                    <h4 className="text-danger my-4">Price : Rs.{product.price}&nbsp;&nbsp;&nbsp;<span class="badge bg-success">{product.discount}</span></h4>
                     <h5 className="my-4">{product.description}</h5>
                     <div className="text-center my-4">
-                    <button className="btn btn-success">Add To Cart</button>
+                    <button className="btn btn-primary">Add To Cart</button>
                     </div>
                 </div>
             </div>
