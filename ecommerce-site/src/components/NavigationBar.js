@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Search from './Search'
 
 export const NavigationBar = () => {
+    const [value, setValue] = useState("");
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
@@ -31,10 +33,12 @@ export const NavigationBar = () => {
                                 </NavDropdown>
                             </li>
                         </ul>
-                        <div className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-warning" type="button">Login</button>
-                        </div>
+                        <form method="POST">
+                            <div className="d-flex">
+                                <input className="form-control me-2 bg-transparant" id="search" type="search" onChange={(e)=>{setValue(e.target.value)}} placeholder="Search" aria-label="Search" />
+                                <Link className="btn btn-warning" to={`/search/${value}`} type="submit">Search</Link>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </nav>

@@ -8,6 +8,7 @@ import { ProductAssesories } from './components/ProductAssesories';
 import { ProductElectronic } from './components/ProductElectronic';
 import { ProductSale } from './components/ProductSale';
 import ProductView from './components/ProductView';
+import Search from './components/Search';
 function App() {
   return (
     <Router>
@@ -15,6 +16,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home/>
+        </Route>
+        <Route exact path="/search/:search">
+          <Search/>
         </Route>
         <Route exact path="/product/clothing">
          <ProductClothing/>
