@@ -29,8 +29,8 @@ const TotalProducts = () => {
                                         <td>{item.title.slice(0, 20)}</td>
                                         <td>{item.description.slice(0, 50) + "..."}</td>
                                         <td>{item.price}</td>
-                                        <td><h4><i class="fa fa-pencil-square-o text-info"></i></h4></td>
-                                        <td><h4><i class="fa fa-trash-o text-danger"></i></h4></td>
+                                        <td><h4><i className="fa fa-pencil-square-o text-info"></i></h4></td>
+                                        <td><h4><i className="fa fa-trash-o text-danger"></i></h4></td>
                                     </tr>
                                 )
                             })
