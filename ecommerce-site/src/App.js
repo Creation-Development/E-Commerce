@@ -16,28 +16,34 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <NavigationBar />
       <Switch>
         <Route exact path="/">
+          <NavigationBar />
           <Home/>
           <Footer/>
         </Route>
         <Route exact path="/search/:search">
+          <NavigationBar />
           <Search/>
         </Route>
         <Route exact path="/product/clothing">
+          <NavigationBar />
          <ProductClothing/>
         </Route>
         <Route exact path="/product/assesories">
+          <NavigationBar />
          <ProductAssesories/>
         </Route>
         <Route exact path="/product/electronics">
+          <NavigationBar />
          <ProductElectronic/>
         </Route>
         <Route exact path="/product/sale">
+          <NavigationBar />
          <ProductSale/>
         </Route>
         <Route exact path="/product/:id">
+          <NavigationBar />
          <ProductView/>
         </Route>
         <Route exact path="/dashboard">
