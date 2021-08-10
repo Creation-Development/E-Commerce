@@ -12,6 +12,7 @@ import ProductView from './components/ProductView';
 import Search from './components/Search';
 import Dashboard from './components/Dashboard';
 import TotalProducts from './components/TotalProducts';
+import Footer from './components/Footer';
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home/>
+          <Footer/>
         </Route>
         <Route exact path="/search/:search">
           <Search/>
