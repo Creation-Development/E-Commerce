@@ -4,7 +4,7 @@ import data from './Data';
 
 export const ProductElectronic = () => {
 
-    var product = data.filter(item => item.category == "electronics");
+    var product = data.filter(item => item.category === "electronics");
 
     return (
         <>

@@ -6,14 +6,15 @@ function ProductView(props) {
 
     console.warn(props)
     var id = props.match.params.id;
+    // eslint-disable-next-line
     var product = data.filter(item => item.id == id)[0];
-    console.log(product.image);
 
     return (
         <>
             <div class="row container my-4 featurette">
                 <div className="col-md-1"></div>
                 <div class="col-md-5">
+                {/* eslint-disable-next-line */}
                     <img src={product.image} width="500" height="500"/>
                 </div>
                 <div className="col-md-1"></div>
