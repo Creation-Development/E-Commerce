@@ -5,10 +5,16 @@ import { Link } from 'react-router-dom'
 export const NavigationBar = () => {
     const [value, setValue] = useState("");
 
-    const [show, setShow] = useState(false);
+    const [showlogin, setShowlogin] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleLoginClose = () => setShowlogin(false);
+    const handleLoginShow = () => setShowlogin(true);
+
+
+    const [showsignup, setShowsignup] = useState(false);
+
+    const handleSignupClose = () => setShowsignup(false);
+    const handleSignupShow = () => setShowsignup(true);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
@@ -41,7 +47,7 @@ export const NavigationBar = () => {
                             <div className="d-flex">
                                 <input className="form-control me-2 bg-transparant" id="search" type="search" onChange={(e) => { setValue(e.target.value) }} placeholder="Search" aria-label="Search" />
                                 <Link className="btn btn-warning" to={`/search/${value}`} type="submit">Search</Link>
-                                <Button variant="danger" className="mx-2" onClick={handleShow}>
+                                <Button variant="danger" className="mx-2" onClick={handleLoginShow}>
                                     Login
                                 </Button>
                             </div>
@@ -53,30 +59,63 @@ export const NavigationBar = () => {
             </nav>
 
 
-            <Modal show={show} onHide={handleClose} animation={false}>
+            <Modal show={showlogin} onHide={handleLoginClose} animation={false}>
                 <Modal.Header>
                     <Modal.Title>Log-in Here</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Container className="p-4">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" />
-                        </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control type="email" placeholder="Enter email" />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
-                        </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="Password" />
+                            </Form.Group>
                         </Container>
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" onClick={handleClose}>
-                        Login
+                    <Button variant="success" onClick={handleLoginClose}>
+                        Submit
                     </Button>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="warning" onClick={handleSignupShow}>
+                        Sign-Up
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+            <Modal show={showsignup} onHide={handleSignupClose}>
+                <Modal.Header>
+                    <Modal.Title>Register Here</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Container className="p-4">
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Username</Form.Label>
+                                <Form.Control type="text" placeholder="Enter Username" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control type="email" placeholder="Enter E-Mail" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="Enter Password" />
+                            </Form.Group>
+                        </Container>
+                    </Form>
+
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="success" onClick={handleSignupClose}>
+                        Submit
+                    </Button>
+                    <Button variant="danger" onClick={handleSignupClose}>
                         Close
                     </Button>
                 </Modal.Footer>
