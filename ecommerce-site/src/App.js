@@ -11,6 +11,7 @@ import { ProductSale } from './components/ProductSale';
 import ProductView from './components/ProductView';
 import Search from './components/Search';
 import Dashboard from './components/Dashboard';
+import TotalProducts from './components/TotalProducts';
 function App() {
   return (
     <Router>
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route exact path="/dashboard">
          <Dashboard/>
+        </Route>
+        <Route exact path="/dashboard/total-products">
+         <TotalProducts/>
         </Route>
       </Switch>
     </Router>
