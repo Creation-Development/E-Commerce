@@ -35,8 +35,14 @@ export const NavigationBar = () => {
                         </ul>
                         <form method="POST">
                             <div className="d-flex">
-                                <input className="form-control me-2 bg-transparant" id="search" type="search" onChange={(e)=>{setValue(e.target.value)}} placeholder="Search" aria-label="Search" />
+                                <input className="form-control me-2 bg-transparant" id="search" type="search" onChange={(e) => { setValue(e.target.value) }} placeholder="Search" aria-label="Search" />
                                 <Link className="btn btn-warning" to={`/search/${value}`} type="submit">Search</Link>
+                            </div>
+                            <div>
+                                <buttton class="btn btn btn-danger mx-2 my-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    Login </buttton>
+                                <buttton class="btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                    Signup</buttton>
                             </div>
                         </form>
                     </div>
