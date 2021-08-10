@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
-import { NavDropdown } from 'react-bootstrap'
+import { Modal, NavDropdown, Button, Form, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Search from './Search'
 
 export const NavigationBar = () => {
     const [value, setValue] = useState("");
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
@@ -37,17 +41,48 @@ export const NavigationBar = () => {
                             <div className="d-flex">
                                 <input className="form-control me-2 bg-transparant" id="search" type="search" onChange={(e) => { setValue(e.target.value) }} placeholder="Search" aria-label="Search" />
                                 <Link className="btn btn-warning" to={`/search/${value}`} type="submit">Search</Link>
+                                <Button variant="danger" className="mx-2" onClick={handleShow}>
+                                    Login
+                                </Button>
                             </div>
                             <div>
-                                <buttton class="btn btn btn-danger mx-2 my-2" data-bs-toggle="modal" data-bs-target="#loginModal">
-                                    Login </buttton>
-                                <buttton class="btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">
-                                    Signup</buttton>
                             </div>
                         </form>
                     </div>
                 </div>
             </nav>
+
+
+            <Modal show={show} onHide={handleClose} animation={false}>
+                <Modal.Header>
+                    <Modal.Title>Log-in Here</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Container className="p-4">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="Enter email" />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="password" placeholder="Password" />
+                        </Form.Group>
+                        </Container>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleClose}>
+                        Login
+                    </Button>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+
         </div>
     )
 }
