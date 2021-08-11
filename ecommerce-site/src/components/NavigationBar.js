@@ -41,9 +41,9 @@ export const NavigationBar = () => {
             </nav>
 
 
-            <Modal show={showlogin} onHide={handleLoginClose} animation={false}>
+            <Modal size='sm' show={showlogin} onHide={handleLoginClose} animation={false}>
                 <Modal.Header>
-                    <Modal.Title style={{marginLeft:160}}>Log-in Here</Modal.Title>
+                    <Modal.Title style={{marginLeft:60}}>Log-in Here</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
@@ -60,7 +60,7 @@ export const NavigationBar = () => {
                         </Container>
                     </Form>
                 </Modal.Body>
-                <Modal.Footer style={{marginRight:150}}>
+                <Modal.Footer style={{marginRight:50}}>
                     <Button variant="success" onClick={(e)=>{validation(e,username,pass)}}>
                         Submit
                     </Button>

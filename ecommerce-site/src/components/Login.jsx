@@ -14,7 +14,7 @@ const Login = (props) => {
     else {
         var userdata = user.filter((person) => (person.username === username && person.password === pass))
         if (userdata.length === 0) {
-            alert("Enter Valid Credentials and rty again...!!")
+            alert("Enter Valid Credentials and try again...!!")
             window.location = '/'
         }
         else {
