@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Modal, NavDropdown, Button, Form, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { Login } from './Login';
 
 export const NavigationBar = () => {
     const [value, setValue] = useState("");
@@ -12,9 +13,13 @@ export const NavigationBar = () => {
 
 
     const [showsignup, setShowsignup] = useState(false);
-
+    
     const handleSignupClose = () => setShowsignup(false);
     const handleSignupShow = () => setShowsignup(true);
+    
+    const [username, setusername] = useState("");
+    const [pass, setpass] = useState("");
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
@@ -71,18 +76,18 @@ export const NavigationBar = () => {
                         <Container className="p-4">
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
+                                <Form.Control onChange={(e)=>{setusername(e.target.value)}} type="email" placeholder="Enter email" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
+                                <Form.Control onChange={(e)=>{setpass(e.target.value)}} type="password" placeholder="Password" />
                             </Form.Group>
                         </Container>
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="success" onClick={handleLoginClose}>
+                    <Button variant="success" onClick={()=>window.location=`/login/${username}/${pass}`}>
                         Submit
                     </Button>
                     <Button variant="warning" onClick={handleSignupShow}>

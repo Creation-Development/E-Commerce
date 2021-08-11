@@ -15,6 +15,7 @@ import TotalProducts from './components/TotalProducts';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import Totaluser from './components/Totaluser';
+import Login from './components/Login';
 function App() {
   return (
     <Router>
@@ -23,6 +24,9 @@ function App() {
           <NavigationBar />
           <Home />
           <Footer />
+        </Route>
+        <Route exact path="/login/:username/:pass">
+          <Login/>
         </Route>
         <Route exact path="/search/:search">
           <NavigationBar />

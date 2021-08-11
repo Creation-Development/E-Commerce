@@ -210,8 +210,8 @@ var user = [
         },
         "id": 10,
         "email": "jimmie@gmail.com",
-        "username": "jimmie_k",
-        "password": "klein*#%*",
+        "username": "harsh",
+        "password": "harsh123",
         "name": {
             "firstname": "jimmie",
             "lastname": "klein"
