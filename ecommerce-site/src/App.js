@@ -13,44 +13,48 @@ import Search from './components/Search';
 import Dashboard from './components/Dashboard';
 import TotalProducts from './components/TotalProducts';
 import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
           <NavigationBar />
-          <Home/>
-          <Footer/>
+          <Home />
+          <Footer />
         </Route>
         <Route exact path="/search/:search">
           <NavigationBar />
-          <Search/>
+          <Search />
         </Route>
         <Route exact path="/product/clothing">
           <NavigationBar />
-         <ProductClothing/>
+          <ProductClothing />
         </Route>
         <Route exact path="/product/assesories">
           <NavigationBar />
-         <ProductAssesories/>
+          <ProductAssesories />
         </Route>
         <Route exact path="/product/electronics">
           <NavigationBar />
-         <ProductElectronic/>
+          <ProductElectronic />
         </Route>
         <Route exact path="/product/sale">
           <NavigationBar />
-         <ProductSale/>
+          <ProductSale />
         </Route>
         <Route exact path="/product/:id">
           <NavigationBar />
-         <ProductView/>
+          <ProductView />
         </Route>
         <Route exact path="/dashboard">
-         <Dashboard/>
+          <div className="d-flex">
+            <Sidebar/>
+            <Dashboard />
+          </div>
         </Route>
         <Route exact path="/dashboard/total-products">
-         <TotalProducts/>
+          <TotalProducts />
         </Route>
       </Switch>
     </Router>

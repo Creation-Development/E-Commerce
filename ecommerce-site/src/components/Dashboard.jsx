@@ -11,12 +11,12 @@ const Dashboard = () => {
     var sale = data.filter((item) => item.sale === "true")
     return (
         <>
-            <Container>
+            <Container fluid style={{marginLeft:220}}>
             <div className="text-center text-danger my-4">
                     <h1>Graphical View Of Products</h1>
                 </div>
                 <div className="text-center">
-                <Card className="shadow" style={{height:500, width:1010, marginLeft:100}}>
+                <Card className="shadow" style={{height:500, width:900, marginLeft:180}}>
                     <Chart
                         width={'800px'}
                         height={'100px'}
@@ -40,7 +40,7 @@ const Dashboard = () => {
                         ]}
                         options={{
                             title: 'Item in Category',
-                            width: 1000,
+                            width: 880,
                             height: 500,
                             bar: { groupWidth: '50%' },
                             legend: { position: 'none' },

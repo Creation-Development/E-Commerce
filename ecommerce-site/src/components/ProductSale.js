@@ -10,7 +10,7 @@ export const ProductSale = () => {
         <>
             <div className="title text-center my-4">
                 <h1>
-                Electronic  Products
+                Sale Upto 70% OFF
                 </h1>
             </div>
             <div>
