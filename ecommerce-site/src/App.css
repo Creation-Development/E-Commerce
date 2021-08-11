@@ -7,3 +7,12 @@
   border-color: white !important;
   transition: 0.3s all ease-in;
 }
+i.fa.fa-bars{
+  outline: none;
+}
+i.fa.fa-bars:focus{
+  outline: none;
+}
+.offcanvas{
+  width: 250px !important;
+}

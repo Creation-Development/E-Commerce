@@ -14,7 +14,6 @@ function ProductView(props) {
             <div class="row container my-4 featurette">
                 <div className="col-md-1"></div>
                 <div class="col-md-5">
-                {/* eslint-disable-next-line */}
                     <img src={product.image} width="500" height="500"/>
                 </div>
                 <div className="col-md-1"></div>

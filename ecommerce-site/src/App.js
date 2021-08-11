@@ -16,68 +16,81 @@ import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import Totaluser from './components/Totaluser';
 import Login from './components/Login';
+import LoginNavbar from './components/LoginNavbar';
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <NavigationBar />
-          <Home />
-          <Footer />
-        </Route>
-        <Route exact path="/login/:username/:pass">
-          <Login/>
-        </Route>
-        <Route exact path="/search/:search">
-          <NavigationBar />
-          <Search />
-          <Footer />
-        </Route>
-        <Route exact path="/product/clothing">
-          <NavigationBar />
-          <ProductClothing />
-          <Footer />
-        </Route>
-        <Route exact path="/product/assesories">
-          <NavigationBar />
-          <ProductAssesories />
-          <Footer />
-        </Route>
-        <Route exact path="/product/electronics">
-          <NavigationBar />
-          <ProductElectronic />
-          <Footer />
-        </Route>
-        <Route exact path="/product/sale">
-          <NavigationBar />
-          <ProductSale />
-          <Footer />
-        </Route>
-        <Route exact path="/product/:id">
-          <NavigationBar />
-          <ProductView />
-          <Footer />
-        </Route>
-        <Route exact path="/dashboard">
-          <div className="d-flex">
-            <Sidebar />
-            <Dashboard />
-          </div>
-        </Route>
-        <Route exact path="/dashboard/total-products">
-          <div className="d-flex">
-            <Sidebar />
-            <TotalProducts />
-          </div>
+        {!sessionStorage.getItem("username") ?
+          <>
+            <Route exact path="/">
+              <NavigationBar />
+              <Home />
+              <Footer />
+            </Route>
+            <Route exact path="/login/:username/:pass">
+              <Login />
+            </Route>
+          </>
+          :
+          <>
+            <Route exact path="/">
+              <LoginNavbar />
+              <Home />
+              <Footer />
+            </Route>
+            <Route exact path="/search/:search">
+              <LoginNavbar />
+              <Search />
+              <Footer />
+            </Route>
+            <Route exact path="/product/clothing">
+              <LoginNavbar />
+              <ProductClothing />
+              <Footer />
+            </Route>
+            <Route exact path="/product/assesories">
+              <LoginNavbar />
+              <ProductAssesories />
+              <Footer />
+            </Route>
+            <Route exact path="/product/electronics">
+              <LoginNavbar />
+              <ProductElectronic />
+              <Footer />
+            </Route>
+            <Route exact path="/product/sale">
+              <LoginNavbar />
+              <ProductSale />
+              <Footer />
+            </Route>
+            <Route exact path="/products/:id">
+              <LoginNavbar />
+              <ProductView />
+              <Footer />
+            </Route>
+            <Route exact path="/dashboard">
+              <div className="d-flex">
+                <Sidebar />
+                <Dashboard />
+              </div>
+            </Route>
+            <Route exact path="/dashboard/total-products">
+              <div className="d-flex">
+                <Sidebar />
+                <TotalProducts />
+              </div>
 
-        </Route>
-        <Route exact path="/dashboard/total-user">
-          <div className="d-flex">
-            <Sidebar />
-            <Totaluser />
-          </div>
+            </Route>
+            <Route exact path="/dashboard/total-user">
+              <div className="d-flex">
+                <Sidebar />
+                <Totaluser />
+              </div>
 
-        </Route>
+            </Route>
+          </>
+        }
       </Switch>
     </Router>
 

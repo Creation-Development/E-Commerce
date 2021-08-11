@@ -4,7 +4,7 @@ import data from './Data';
 
 export const ProductElectronic = () => {
 
-    var product = data.filter(item => item.category === "electronic");
+    var product = data.filter((item )=> item.category === "electronic");
 
     return (
         <>
@@ -32,7 +32,7 @@ export const ProductElectronic = () => {
                                             {item.description.slice(0, 30)+"..."}
                                             </Card.Text>
                                             <div className="d-flex">
-                                            <Button className="btn-sm" href={`/product/${item.id}`} style={{marginInline:5}} variant="primary"><i class="fa fa-cart-plus mr-2"></i> View Product</Button>
+                                            <Button className="btn-sm" href={`/products/${item.id}`} style={{marginInline:5}} variant="primary"><i class="fa fa-cart-plus mr-2"></i> View Product</Button>
                                             <Button className="btn-sm" style={{marginInline:5}} variant="primary"><i class="fa fa-eye mr-2"></i> Add To Cart</Button>
                                             </div>
                                         </Card.Body>
