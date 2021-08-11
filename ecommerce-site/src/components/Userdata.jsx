@@ -11,15 +11,16 @@ var user = [
             "zipcode": "12926-3874"
         },
         "id": 1,
-        "email": "john@gmail.com",
-        "username": "johnd",
-        "password": "m38rmF$",
+        "email": "akshay@gmail.com",
+        "username": "akshay",
+        "password": "akshay123",
         "name": {
-            "firstname": "john",
-            "lastname": "doe"
+            "firstname": "Akshay",
+            "lastname": "Godhaniya"
         },
-        "phone": "1-570-236-7033",
-        "__v": 0
+        "phone": "7201976299",
+        "image": "https://images.unsplash.com/photo-1584999734482-0361aecad844?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -33,15 +34,16 @@ var user = [
             "zipcode": "12926-3874"
         },
         "id": 2,
-        "email": "morrison@gmail.com",
-        "username": "mor_2314",
-        "password": "83r5^_",
+        "email": "sanket@gmail.com",
+        "username": "sanket",
+        "password": "sanket123",
         "name": {
-            "firstname": "david",
-            "lastname": "morrison"
+            "firstname": "Sanket",
+            "lastname": "Mulani"
         },
-        "phone": "1-570-236-7033",
-        "__v": 0
+        "phone": "6353688280",
+        "image": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzR8fHVzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -55,15 +57,16 @@ var user = [
             "zipcode": "29567-1452"
         },
         "id": 3,
-        "email": "kevin@gmail.com",
-        "username": "kevinryan",
-        "password": "kev02937@",
+        "email": "ketan@gmail.com",
+        "username": "ketan",
+        "password": "ketan123",
         "name": {
-            "firstname": "kevin",
-            "lastname": "ryan"
+            "firstname": "Ketan",
+            "lastname": "Kalsriya"
         },
-        "phone": "1-567-094-1345",
-        "__v": 0
+        "phone": "9033151243",
+        "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fHVzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -77,15 +80,16 @@ var user = [
             "zipcode": "98234-1734"
         },
         "id": 4,
-        "email": "don@gmail.com",
-        "username": "donero",
-        "password": "ewedon",
+        "email": "keyur@gmail.com",
+        "username": "keyur",
+        "password": "keyur123",
         "name": {
-            "firstname": "don",
-            "lastname": "romer"
+            "firstname": "Keyur",
+            "lastname": "Mulani"
         },
-        "phone": "1-765-789-6734",
-        "__v": 0
+        "phone": "6353252522",
+        "image": "https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHVzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -99,15 +103,16 @@ var user = [
             "zipcode": "80796-1234"
         },
         "id": 5,
-        "email": "derek@gmail.com",
-        "username": "derek",
-        "password": "jklg*_56",
+        "email": "raj@gmail.com",
+        "username": "raj",
+        "password": "raj123",
         "name": {
-            "firstname": "derek",
-            "lastname": "powell"
+            "firstname": "Raj",
+            "lastname": "Hanani"
         },
-        "phone": "1-956-001-1945",
-        "__v": 0
+        "phone": "9913548243",
+        "image": "https://images.unsplash.com/photo-1563237023-b1e970526dcb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHVzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -121,15 +126,16 @@ var user = [
             "zipcode": "12346-0456"
         },
         "id": 6,
-        "email": "david_r@gmail.com",
-        "username": "david_r",
-        "password": "3478*#54",
+        "email": "varshil@gmail.com",
+        "username": "varshil",
+        "password": "varshil",
         "name": {
-            "firstname": "david",
-            "lastname": "russell"
+            "firstname": "Varshil",
+            "lastname": "Gadhiya"
         },
-        "phone": "1-678-345-9856",
-        "__v": 0
+        "phone": "7851278965",
+        "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHVzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -143,15 +149,16 @@ var user = [
             "zipcode": "96378-0245"
         },
         "id": 7,
-        "email": "miriam@gmail.com",
-        "username": "snyder",
-        "password": "f238&@*$",
+        "email": "mihir@gmail.com",
+        "username": "mihir",
+        "password": "mihir123",
         "name": {
-            "firstname": "miriam",
-            "lastname": "snyder"
+            "firstname": "Mihir",
+            "lastname": "Gohil"
         },
-        "phone": "1-123-943-0563",
-        "__v": 0
+        "phone": "9033302524",
+        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -165,15 +172,16 @@ var user = [
             "zipcode": "96378-0245"
         },
         "id": 8,
-        "email": "william@gmail.com",
-        "username": "hopkins",
-        "password": "William56$hj",
+        "email": "prakash@gmail.com",
+        "username": "prakash",
+        "password": "prakash",
         "name": {
-            "firstname": "william",
-            "lastname": "hopkins"
+            "firstname": "Prakash",
+            "lastname": "Darji"
         },
-        "phone": "1-478-001-0890",
-        "__v": 0
+        "phone": "9923530235",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -187,15 +195,16 @@ var user = [
             "zipcode": "96378-0245"
         },
         "id": 9,
-        "email": "kate@gmail.com",
-        "username": "kate_h",
-        "password": "kfejk@*_",
+        "email": "jeet@gmail.com",
+        "username": "jeet",
+        "password": "jeet123",
         "name": {
-            "firstname": "kate",
-            "lastname": "hale"
+            "firstname": "Jeet",
+            "lastname": "Hanani"
         },
-        "phone": "1-678-456-1934",
-        "__v": 0
+        "phone": "7532352101",
+        "image":"https://images.unsplash.com/photo-1598346762291-aee88549193f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHVzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"user"
     },
     {
         "address": {
@@ -209,15 +218,16 @@ var user = [
             "zipcode": "10256-4532"
         },
         "id": 10,
-        "email": "jimmie@gmail.com",
+        "email": "harsh@gmail.com",
         "username": "harsh",
         "password": "harsh123",
         "name": {
-            "firstname": "jimmie",
-            "lastname": "klein"
+            "firstname": "Gohil",
+            "lastname": "Harsh"
         },
-        "phone": "1-104-001-4567",
-        "__v": 0
+        "phone": "7359169259",
+        "image":"https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "role":"admin"
     }
 ]
 

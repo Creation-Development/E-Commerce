@@ -18,7 +18,6 @@ const Totaluser = () => {
                             <th>Contact Number</th>
                             <th>E-Mail</th>
                             <th>Password</th>
-                            <th>Zip-Code</th>
                             <th colSpan={2}>Action</th>
                         </tr>
                     </thead>
@@ -34,7 +33,6 @@ const Totaluser = () => {
                                         <td>{item.phone}</td>
                                         <td>{item.email}</td>
                                         <td>{item.password}</td>
-                                        <td>{item.address.zipcode}</td>
                                         <td><h4><i className="fa fa-pencil-square-o text-info"></i></h4></td>
                                         <td><h4><i className="fa fa-trash-o text-danger"></i></h4></td>
                                     </tr>
