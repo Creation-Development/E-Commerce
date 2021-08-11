@@ -12,7 +12,6 @@ const Dashboard = () => {
     var sale = data.filter((item) => item.sale === "true")
     return (
         <>
-            <div>
                 <Container fluid style={{ marginLeft: 220 }}>
                     <div className="text-center text-danger my-4">
                         <h1>Graphical View Of Products</h1>
@@ -118,7 +117,6 @@ const Dashboard = () => {
                     </div>
 
                 </Container>
-            </div>
 
         </>
     )
