@@ -43,25 +43,25 @@ export const NavigationBar = () => {
 
             <Modal show={showlogin} onHide={handleLoginClose} animation={false}>
                 <Modal.Header>
-                    <Modal.Title>Log-in Here</Modal.Title>
+                    <Modal.Title style={{marginLeft:160}}>Log-in Here</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Container className="p-4">
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control onChange={(e)=>{setusername(e.target.value)}} type="email" placeholder="Enter email" />
+                                <Form.Label>Username</Form.Label>
+                                <Form.Control onChange={(e)=>{setusername(e.target.value)}} type="text" placeholder="Enter Your Username" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control onChange={(e)=>{setpass(e.target.value)}} type="password" placeholder="Password" />
+                                <Form.Control onChange={(e)=>{setpass(e.target.value)}} type="password" placeholder="Enter Your Password" />
                             </Form.Group>
                         </Container>
                     </Form>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="success" onClick={()=>window.location=`/login/${username}/${pass}`}>
+                <Modal.Footer style={{marginRight:150}}>
+                    <Button variant="success" onClick={(e)=>{validation(e,username,pass)}}>
                         Submit
                     </Button>
                     <Button variant="warning" onClick={handleSignupShow}>
@@ -106,4 +106,18 @@ export const NavigationBar = () => {
 
         </div>
     )
+}
+
+function validation(e,username,pass) {
+    if(username == ''){
+        alert("Enter Valid Username")
+        e.preventDefault()
+    }
+    else if(pass == ''){
+        alert("Enter Valid Password")
+        e.preventDefault()
+    }
+    else{
+        window.location = `/login/${username}/${pass}`
+    }
 }

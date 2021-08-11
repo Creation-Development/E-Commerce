@@ -5,15 +5,25 @@ import user from './Userdata';
 const Login = (props) => {
     var username = props.match.params.username
     var pass = props.match.params.pass
-    var userdata = user.filter((person)=>(person.username === username && person.password === pass))
-    if(userdata.length === 0){
+    if (username === '') {
+        alert("Field can't be blank")
     }
-    else{
-        sessionStorage.setItem("username",userdata[0].username)
-        sessionStorage.setItem("password",userdata[0].password)
-        sessionStorage.setItem("id",userdata[0].id)
+    else if (pass === '') {
+        alert("Field can't be blank")
     }
-    window.location = '/'
+    else {
+        var userdata = user.filter((person) => (person.username === username && person.password === pass))
+        if (userdata.length === 0) {
+            alert("Enter Valid Credentials and rty again...!!")
+            window.location = '/'
+        }
+        else {
+            sessionStorage.setItem("username", userdata[0].username)
+            sessionStorage.setItem("password", userdata[0].password)
+            sessionStorage.setItem("id", userdata[0].id)
+            window.location = '/'
+        }
+    }
     return (
         <>
         </>
