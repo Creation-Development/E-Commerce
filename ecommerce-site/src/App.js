@@ -14,6 +14,7 @@ import Dashboard from './components/Dashboard';
 import TotalProducts from './components/TotalProducts';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
+import Totaluser from './components/Totaluser';
 function App() {
   return (
     <Router>
@@ -26,35 +27,52 @@ function App() {
         <Route exact path="/search/:search">
           <NavigationBar />
           <Search />
+          <Footer />
         </Route>
         <Route exact path="/product/clothing">
           <NavigationBar />
           <ProductClothing />
+          <Footer />
         </Route>
         <Route exact path="/product/assesories">
           <NavigationBar />
           <ProductAssesories />
+          <Footer />
         </Route>
         <Route exact path="/product/electronics">
           <NavigationBar />
           <ProductElectronic />
+          <Footer />
         </Route>
         <Route exact path="/product/sale">
           <NavigationBar />
           <ProductSale />
+          <Footer />
         </Route>
         <Route exact path="/product/:id">
           <NavigationBar />
           <ProductView />
+          <Footer />
         </Route>
         <Route exact path="/dashboard">
           <div className="d-flex">
-            <Sidebar/>
+            <Sidebar />
             <Dashboard />
           </div>
         </Route>
         <Route exact path="/dashboard/total-products">
-          <TotalProducts />
+          <div className="d-flex">
+            <Sidebar />
+            <TotalProducts />
+          </div>
+
+        </Route>
+        <Route exact path="/dashboard/total-user">
+          <div className="d-flex">
+            <Sidebar />
+            <Totaluser />
+          </div>
+
         </Route>
       </Switch>
     </Router>
