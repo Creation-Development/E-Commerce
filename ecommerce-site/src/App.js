@@ -18,6 +18,7 @@ import Totaluser from './components/Totaluser';
 import Login from './components/Login';
 import LoginNavbar from './components/LoginNavbar';
 import user from './components/Userdata';
+import Addcart from './components/Addcart';
 function App() {
   return (
     <Router>
@@ -69,6 +70,9 @@ function App() {
               <LoginNavbar />
               <ProductView />
               <Footer />
+            </Route>
+            <Route exact path="/addcart/:id">
+              <Addcart />
             </Route>
             <Route exact path="/dashboard">
               <div className="d-flex">

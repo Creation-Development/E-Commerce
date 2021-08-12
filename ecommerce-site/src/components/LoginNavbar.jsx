@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react'
-import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import user from './Userdata';
 
@@ -13,6 +12,10 @@ const LoginNavbar = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    
+    var datacart= JSON.parse(sessionStorage.getItem('cart')).length;
+    console.log(JSON.parse(sessionStorage.getItem('cart')));
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
@@ -36,7 +39,7 @@ const LoginNavbar = () => {
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown" style={{marginLeft:1350}}>
                                     <li><Link className="dropdown-item" to="/">{userdata[0].name.firstname + " " + userdata[0].name.lastname}</Link></li>
                                     <li><Link className="dropdown-item" to="/">{userdata[0].email}</Link></li>
-                                    <li><Link className="dropdown-item" to="/">{userdata[0].phone}</Link></li>
+                                    <li><Link className="dropdown-item" to="/">Your Cart&nbsp;&nbsp;&nbsp;<span class="badge  rounded-pill bg-danger">{datacart / 2}</span></Link></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><Link className="dropdown-item" to="/" onClick={() => { sessionStorage.clear(); window.location = "/" }}>Logout</Link></li>
                                 </ul>

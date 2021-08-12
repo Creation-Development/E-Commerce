@@ -1,4 +1,5 @@
 import React from 'react'
+import { Spinner } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import user from './Userdata';
 
@@ -26,6 +27,12 @@ const Login = (props) => {
     }
     return (
         <>
+        <div className="justify-content-center d-flex" style={{marginTop:300}}>
+                <h1><Spinner animation="grow" size="lg" variant="success" /></h1>
+                <h1><Spinner animation="grow" size="lg" variant="success" /></h1>
+                <h1><Spinner animation="grow" size="lg" variant="success" /></h1>
+                <h1><Spinner animation="grow" size="lg" variant="success" /></h1>
+            </div>
         </>
     )
 }

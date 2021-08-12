@@ -22,7 +22,7 @@ function ProductView(props) {
                     <h4 className="text-danger my-4">Price : Rs.{product.price}&nbsp;&nbsp;&nbsp;<span class="badge bg-success">{product.discount}</span></h4>
                     <h5 className="my-4">{product.description}</h5>
                     <div className="text-center my-4">
-                    <button className="btn btn-primary">Add To Cart</button>
+                    <a href={`/addcart/${product.id}`} className="btn btn-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
