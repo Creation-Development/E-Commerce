@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Card, Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import data from './Data';
 
 
@@ -34,7 +35,7 @@ export const ProductAssesories = () => {
                                             </Card.Text>
                                             <div className="d-flex">
                                             <Button className="btn-sm" href={`/products/${item.id}`} style={{marginInline:5}} variant="primary"><i class="fa fa-cart-plus mr-2"></i> View Product</Button>
-                                            <Button className="btn-sm" href={`/addcart/${item.id}`} style={{marginInline:5}} variant="primary"><i class="fa fa-eye mr-2"></i> Add To Cart</Button>
+                                            <Link className="btn-sm btn-primary text-decoration-none" to={`/addcart/${item.id}/1`} style={{ marginInline: 5 }}><i class="fa fa-eye mr-2"></i> Add To Cart</Link>
                                             </div>
                                         </Card.Body>
                                     </Card>

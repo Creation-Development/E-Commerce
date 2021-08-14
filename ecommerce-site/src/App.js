@@ -17,7 +17,6 @@ import Sidebar from './components/Sidebar';
 import Totaluser from './components/Totaluser';
 import Login from './components/Login';
 import LoginNavbar from './components/LoginNavbar';
-import user from './components/Userdata';
 import Addcart from './components/Addcart';
 function App() {
   return (
@@ -71,7 +70,7 @@ function App() {
               <ProductView />
               <Footer />
             </Route>
-            <Route exact path="/addcart/:id">
+            <Route exact path="/addcart/:id/:quantity">
               <Addcart />
             </Route>
             <Route exact path="/dashboard">

@@ -12,10 +12,11 @@ const LoginNavbar = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    
-    var datacart= JSON.parse(sessionStorage.getItem('cart')).length;
-    console.log(JSON.parse(sessionStorage.getItem('cart')));
+    var datacart = 0
+    if(localStorage.cart){
+        var datacart= JSON.parse(localStorage.getItem('cart')).length;
+        var quantityList= JSON.parse(localStorage.getItem('quantityList'));
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">

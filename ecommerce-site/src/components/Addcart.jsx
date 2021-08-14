@@ -1,21 +1,26 @@
 import React from 'react'
 import { Spinner } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
-import data from './Data'
 
 const Addcart = (props) => {
     var id = props.match.params.id
-    var item = data.filter((value) => value.id == id)[0]
-    var cart = []
-    if(sessionStorage.cart){
-        var cart = JSON.parse(sessionStorage.getItem('cart'));
+    var quantity = props.match.params.quantity
+    if (localStorage.cart) {
+        var cart = JSON.parse(localStorage.getItem('cart'));
+        var quantityList = JSON.parse(localStorage.getItem('quantityList'));
     }
-    cart.push({
-        "productId":item.id,
-        "quantity":1
-    })
-    sessionStorage.setItem('cart', JSON.stringify(cart));
+    else {
+        var cart = []
+        var quantityList = []
+    }
+    cart.push(parseInt(id))
+    quantityList.push(parseInt(quantity))
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('quantityList', JSON.stringify(quantityList));
+    console.log(JSON.parse(localStorage.getItem('cart')));
+    console.log(JSON.parse(localStorage.getItem('quantityList')));
     window.history.back()
+
     return (
         <>
             <div className="justify-content-center d-flex" style={{ marginTop: 300 }}>
