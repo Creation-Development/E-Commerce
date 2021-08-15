@@ -10,10 +10,16 @@ function ProductView(props) {
     if (localStorage.getItem('cart')) {
         var cart = JSON.parse(localStorage.getItem('cart'))
         var quantityList = JSON.parse(localStorage.getItem('quantityList'))
+        var cartitem = cart.filter((item) => item == id)
+        var index = cart.indexOf(cartitem[0])
     }
-    var cartitem = cart.filter((item) => item == id)
-    var index = cart.indexOf(cartitem[0])
-    const [quantity,setquantity] = useState(quantityList[index])
+    else{
+        var quantity = 0
+        var index = 0
+        var quantityList =[0]
+        var cartitem = []
+    }
+    var [quantity,setquantity] = useState(quantityList[index])
     
 
     var update = (num) => {
