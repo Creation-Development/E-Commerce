@@ -16,3 +16,16 @@ i.fa.fa-bars:focus{
 .offcanvas{
   width: 250px !important;
 }
+.checkout{
+  background: rgba(255, 255, 255, 0.85)  !important;
+}
+.main-checkout{
+  background: url("./images/michael-payne-IRhVLvPkP9M-unsplash.jpg");
+  padding-bottom: 100px !important;
+}
+.MuiSvgIcon-root.MuiStepIcon-root{
+  color:green !important;
+}
+.MuiStepConnector-line.MuiStepConnector-lineHorizontal{
+  border-color: black !important;
+}

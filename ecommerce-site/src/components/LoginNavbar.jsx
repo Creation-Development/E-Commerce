@@ -168,8 +168,8 @@ const LoginNavbar = () => {
 
                                         </tbody>
                                     </Table>
-                                    <button type="button" className="btn btn-danger mx-2" data-bs-dismiss="modal">Cancel</button>
-                                    <button type="button" className="btn btn-success mx-2">Checkout</button>
+                                    <button type="button" onClick={() => {localStorage.clear(); window.location.reload()}} className="btn btn-danger mx-2" data-bs-dismiss="modal">Clear Cart</button>
+                                    <Link to="/checkout/" type="button" className="btn btn-success mx-2">Checkout</Link>
                                 </div>
                             </div>
                         </div>

@@ -19,6 +19,7 @@ import Login from './components/Login';
 import LoginNavbar from './components/LoginNavbar';
 import Addcart from './components/Addcart';
 import UpdateCart from './components/UpdateCart';
+import Checkout from './components/Checkout';
 function App() {
   return (
     <Router>
@@ -78,6 +79,10 @@ function App() {
             <Route exact path="/updatecart/:id/:quantity">
               <LoginNavbar />
               <UpdateCart />
+            </Route>
+            <Route exact path="/checkout/">
+              <LoginNavbar />
+              <Checkout />
             </Route>
             <Route exact path="/dashboard">
               <div className="d-flex">
