@@ -14,6 +14,7 @@ const Checkout = () => {
     var datacart = JSON.parse(localStorage.getItem('cart'));
     var cartitem = [...new Set(datacart)]
     var quantityList = JSON.parse(localStorage.getItem('quantityList'));
+    var orderID = Math.floor(Math.random() * 1000000)
     var cartquantity = cartitem.map((item) => (
         quantityList[datacart.indexOf(item)]
     ))
@@ -237,7 +238,7 @@ const Checkout = () => {
 
                                 <hr class="my-4" />
 
-                                <button class="w-100 btn btn-success btn-lg" type="submit">Continue to checkout</button>
+                                <button class="w-25 btn btn-success" type="submit">Continue to checkout</button>
                             </form>
                         </div>
 
@@ -245,9 +246,18 @@ const Checkout = () => {
                     </>
                 );
             case 2:
-                return 'This is the bit I really care about!';
+                return (
+                    <div className="row">
+                        <div className="head">
+                            <h1>Confirm Order and Get OrderId</h1>
+                        </div>
+                        <div className="orderId" style={{marginBlock:200}}>
+                        <h3>Your OrderId is : {orderID}</h3>
+                        </div>
+                    </div>
+                );
             default:
-                return 'Unknown step';
+                return 'No Cart Found';
         }
     }
 
