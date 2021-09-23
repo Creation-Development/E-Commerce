@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('../../App.css');
+.side-header{
+    text-align: center !important;
+    padding-top: 15px !important;
+}
+.sidebar-title{
+    font-family: 'Ubuntu', sans-serif !important;
+    /* color: black !important; */
+    color: #518db8f0 !important;
+}
+.MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters{
+    color: azure !important;
+}
+.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock{
+    font-family: 'Ubuntu', sans-serif !important;
+    color: cadetblue;
+}
+.nav-list.active{
+    color: rgb(0, 0, 0) !important;
+    background-color: #4a8fca80 !important;
+    border: 2px solid #518db8f0  !important;
+}.MuiListItemIcon-root , .MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock{
+    color: #518db8f0 !important;
+}
+.nav-list.active > .MuiTypography-root.MuiListItemText-primary{
+    color: #518db8f0 !important;
+}
+.nav-list{
+    border: 2px solid transparent !important;
+}
+.nav-link{
+    text-decoration: none !important;
+    /* border: 2px solid transparent !important; */
+}
